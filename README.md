@@ -46,3 +46,10 @@ gtk themes are in ~/.themes, i just use lxappearance to change it
 
 i dont really remember what my rofi config is like, powermenu.sh is like a nice
 power menu window or something
+
+## useful stuff
+
+### color-scripts
+
+`~/.local/share/color-scripts` is a dir that contains a lot of scripts for
+testing terminal colors, testing nerd font usage, and testing powerline font usage.
