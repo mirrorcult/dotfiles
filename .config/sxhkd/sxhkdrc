@@ -8,21 +8,15 @@ super + Return
 
 # program launcher
 super + d
-	rofi -modi drun -show drun -line-padding 4 \
-                -columns 2 -padding 50 -hide-scrollbar -terminal termite \
-                -show-icons -drun-icon-theme "Arc-X-D" -font "Droid Sans Regular 10"
+	rofi -modi drun -show drun
 
 # show open window
 super + ctrl + d
-	rofi -modi drun -show window -line-padding 4 \
-                -columns 2 -padding 50 -hide-scrollbar -terminal termite \
-                -show-icons -drun-icon-theme "Arc-X-D" -font "Droid Sans Regular 10"
+	rofi -modi drun -show window
 
 # show ssh sesssions
 super + shift + d
-	rofi -modi drun -show ssh -line-padding 4 \
-                -columns 2 -padding 50 -hide-scrollbar -terminal termite \
-                -show-icons -drun-icon-theme "Arc-X-D" -font "Droid Sans Regular 10"
+	rofi -modi drun -show ssh
 
 # power-menu 
 super + shift + e
@@ -93,7 +87,7 @@ super + {grave,Tab}
 	bspc {node,desktop} -f last
 
 # focus the older or newer node in the focus history
-super + {o,i}
+super + {l,n}
 	bspc wm -h off; \
 	bspc node {older,newer} -f; \
 	bspc wm -h on
@@ -162,19 +156,25 @@ XF86MonBrightnessUp
 XF86MonBrightnessDown
   light -U 5
 
-# Screenshot
+# Screenshot current window
 Print
   maim -i $(xdotool getactivewindow) ~/Pictures/Screenshots/maim/$(date +%F-%s).png
 
-super+Print
+# Selection screenshot
+super + Print
   maim -s | xclip -selection clipboard -t image/png
 
-# Shortcuts
-super + w 
-  firefox
+# My keyboard has a button that does this input chord for some reason so i'll
+# use it
 
-super + n 
-  thunar  
+# Selection screenshot (alternative)
+super + shift + s
+  maim -s | xclip -selection clipboard -t image/png
 
+# Shortcuts firefox, thunar, spotify
+super + o; {w, n, s, r}
+  {firefox, thunar, spotify, rider}
+
+# Keybindings
 super + F1
   ~/.config/bspwm/scripts/keybindings_rofi.sh

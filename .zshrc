@@ -88,6 +88,8 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='mvim'
 # fi
 
+export EDITOR='nvim'
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -101,9 +103,9 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias k="exa -l"
 alias ka="exa -la"
+alias kt="exa -lsnew"
 alias ll="ls -l"
 alias lla="ls -la"
-alias fd="fd-find"
 
 alias vi="nvim"
 alias vim="nvim"

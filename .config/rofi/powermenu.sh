@@ -5,7 +5,7 @@ lock="    Lock"
 logout="    Logout"
 shutdown="    Shutdown"
 reboot="    Reboot"
-sleep="   Sleep"
+sleep="    Sleep"
 
 # Get answer from user via rofi
 selected_option=$(echo "$lock
@@ -16,12 +16,9 @@ $shutdown" | rofi -dmenu\
                   -i\
                   -p "Power"\
                   -config "~/.config/rofi/config.rasi"\
-                  -font "Symbols Nerd Font 12"\
-                  -width "15"\
-                  -lines 5\
-                  -line-margin 3\
-                  -line-padding 10\
-                  -scrollbar-width "0" )
+                  -font "Iosevka Mayukai 12"\
+                  -width "10"\
+                  -height "10" )
 
 # Do something based on selected option
 if [ "$selected_option" == "$lock" ]

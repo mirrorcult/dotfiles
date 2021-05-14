@@ -43,3 +43,7 @@ nm-applet --indicator &
 
 # Cursor
 xsetroot -cursor_name left_ptr &
+
+# fucking java
+export _JAVA_AWT_WM_NONREPARENTING=1
+wmname LG3D
